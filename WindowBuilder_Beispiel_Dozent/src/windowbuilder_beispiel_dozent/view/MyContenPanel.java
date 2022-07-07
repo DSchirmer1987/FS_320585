@@ -1,10 +1,10 @@
 package windowbuilder_beispiel_dozent.view;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.BorderLayout;
 
 public class MyContenPanel extends JPanel {
 	
