@@ -3,6 +3,7 @@ package windowbuilder_beispiel_dozent.view;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.BorderLayout;
 
 public class MyContenPanel extends JPanel {
@@ -22,7 +23,8 @@ public class MyContenPanel extends JPanel {
 		
 		myEastPanel = new MyEastPanel();
 		add(myEastPanel, BorderLayout.EAST);
-
+		myEastPanel.setPreferredSize(new Dimension(MainFrame.getFenstergroesse().width / 4, MainFrame.getFenstergroesse().height));
+		System.out.println(myEastPanel.getPreferredSize());
 	}
 
 }

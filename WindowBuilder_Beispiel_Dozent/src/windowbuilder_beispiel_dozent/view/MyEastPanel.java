@@ -14,6 +14,14 @@ public class MyEastPanel extends JPanel {
 	 * Create the panel.
 	 */
 	public MyEastPanel() {
+		/*
+		 * Was wäre wenn ich die Größe prozentual angeben möchte?
+		 * Was wäre wenn ich die Größe proportional zum Fenster angeben möchte?
+		 * Zugriff auf Eltern-Container erst NACHDEM der Constructor durchgelaufen ist.
+		 */
+//		System.out.println(this.getParent());
+//		int breite = this.getParent().getWidth();
+//		System.out.println(breite);
 		setPreferredSize(new Dimension(250, 400));
 		setBorder(new LineBorder(Color.MAGENTA, 5, true));
 		setLayout(new GridLayout(0, 1, 0, 0));
