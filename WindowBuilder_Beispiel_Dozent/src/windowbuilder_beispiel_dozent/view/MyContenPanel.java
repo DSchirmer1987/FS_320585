@@ -23,7 +23,7 @@ public class MyContenPanel extends JPanel {
 		
 		myEastPanel = new MyEastPanel();
 		add(myEastPanel, BorderLayout.EAST);
-		myEastPanel.setPreferredSize(new Dimension(MainFrame.getFenstergroesse().width / 4, MainFrame.getFenstergroesse().height));
+//		myEastPanel.setPreferredSize(new Dimension(ViewConfig.getFenstergroesse().width / 4, 0));
 		System.out.println(myEastPanel.getPreferredSize());
 	}
 

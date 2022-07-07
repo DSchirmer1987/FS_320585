@@ -22,7 +22,7 @@ public class MyEastPanel extends JPanel {
 //		System.out.println(this.getParent());
 //		int breite = this.getParent().getWidth();
 //		System.out.println(breite);
-		setPreferredSize(new Dimension(250, 400));
+		setPreferredSize(new Dimension(ViewConfig.getFenstergroesse().width / 4, 200));
 		setBorder(new LineBorder(Color.MAGENTA, 5, true));
 		setLayout(new GridLayout(0, 1, 0, 0));
 		
