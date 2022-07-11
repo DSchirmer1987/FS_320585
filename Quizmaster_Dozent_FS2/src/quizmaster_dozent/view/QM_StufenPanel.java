@@ -27,6 +27,7 @@ public class QM_StufenPanel extends JPanel {
 	
 	public void stufenAnzeigen() {
 		for(JLabel label : stufen) {
+			label.setOpaque(true);
 			add(label);
 		}
 	}

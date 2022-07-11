@@ -21,5 +21,11 @@ public class App {
 			}
 		});
 	}
+	
+	public static void ausgeben() {
+		var text = "Hallo";
+		var ausgabe = new String();
+		text = "Welt";
+	}
 
 }
