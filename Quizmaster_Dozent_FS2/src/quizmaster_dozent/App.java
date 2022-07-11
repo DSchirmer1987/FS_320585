@@ -2,6 +2,8 @@ package quizmaster_dozent;
 
 import java.util.ArrayList;
 
+import quizmaster_dozent.config.Dimensionen;
+import quizmaster_dozent.controller.QM_Controller;
 import quizmaster_dozent.model.spiel.Antwort;
 import quizmaster_dozent.model.spiel.Frage;
 import quizmaster_dozent.model.spiel.Gewinntabelle;
@@ -17,6 +19,7 @@ public class App {
 //		for(Stufe stufe : gt.getStufen()) {
 //			System.out.println(stufe);
 //		}
+		QM_Controller qmc = new QM_Controller();
 		
 		Antwort[] antworten = new Antwort[4];
 		antworten[0] = new Antwort("Ja");
