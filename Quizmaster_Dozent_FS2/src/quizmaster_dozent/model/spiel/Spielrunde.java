@@ -3,6 +3,8 @@ package quizmaster_dozent.model.spiel;
 import java.util.ArrayList;
 
 import quizmaster_dozent.model.spiel.joker.Joker;
+import quizmaster_dozent.model.system.CSVLoader;
+import quizmaster_dozent.model.system.Datenverwaltung;
 
 public class Spielrunde {
 	private Spieler spieler;
@@ -10,6 +12,7 @@ public class Spielrunde {
 	private Gewinntabelle gewinntabelle;
 	private int aktuelleStufe;
 	private ArrayList<Joker> jokers;
+	private Datenverwaltung daten;
 	
 	public Spieler getSpieler() {
 		return spieler;
@@ -53,6 +56,8 @@ public class Spielrunde {
 	}
 	
 	public void spielrundeAufbauen() {
-		// To-do - Wird noch implementiert
+		this.gewinntabelle = new Gewinntabelle(15);
+		daten = new CSVLoader();
+		this.fragen = daten.datenLaden(this.gewinntabelle);
 	}
 }

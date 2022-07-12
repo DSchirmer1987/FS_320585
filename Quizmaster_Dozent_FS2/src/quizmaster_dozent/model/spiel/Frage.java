@@ -38,6 +38,13 @@ public class Frage {
 		this.setAntworten(new Antwort[4]);
 	}
 	
+	public Frage(Stufe stufe, String frage, Antwort[] antworten, int richtigeAntwort) {
+		this.setStufe(stufe);
+		this.setFrage(frage);
+		this.setAntworten(antworten);
+		this.setRichtigeAntwort(richtigeAntwort);
+	}
+	
 	@Override
 	public String toString() {
 		return "Frage [getFrage()=" + getFrage() + ", getAntworten()=" + Arrays.toString(getAntworten())
