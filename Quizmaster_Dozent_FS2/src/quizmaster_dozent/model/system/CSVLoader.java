@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import quizmaster_dozent.model.spiel.Antwort;
@@ -16,8 +18,14 @@ public class CSVLoader implements Datenverwaltung {
 	@Override
 	public ArrayList<Frage> datenLaden(Gewinntabelle gewinntabelle) {
 		ArrayList<Frage> fragen = new ArrayList<>();
+		ClassLoader classloader = getClass().getClassLoader();
+		InputStream is = classloader.getResourceAsStream("csv/WWM.csv");
+		if(is == null) {
+			System.out.println("Datei nicht gefunden!");
+		}
 		try {
-			BufferedReader br = new BufferedReader(new FileReader("src/WWM.csv"));
+			InputStreamReader isr = new InputStreamReader(is);
+			BufferedReader br = new BufferedReader(isr);
 			String zeile;
 			while((zeile = br.readLine()) != null) {
 				String[] werte = zeile.split(";");
