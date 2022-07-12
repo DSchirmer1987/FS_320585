@@ -37,7 +37,7 @@ public class QM_Controller {
 	private void init() {
 		this.spielrunde = new Spielrunde(null, null, null, 1, null);
 		this.spielrunde.spielrundeAufbauen();
-		System.out.println(this.spielrunde.getFragen());
+//		System.out.println(this.spielrunde.getFragen());
 		var tmp = 0;
 		this.gewinntabelle = this.spielrunde.getGewinntabelle();
 		

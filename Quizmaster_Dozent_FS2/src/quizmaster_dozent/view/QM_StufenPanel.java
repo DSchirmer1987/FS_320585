@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class QM_StufenPanel extends JPanel {
 	
 	private ArrayList<JLabel> stufen = new ArrayList<JLabel>();
+	private QM_Fenster parentFrame;
 	
 	public ArrayList<JLabel> getStufen(){
 		return this.stufen;
@@ -20,9 +21,12 @@ public class QM_StufenPanel extends JPanel {
 	/**
 	 * Create the panel.
 	 */
-	public QM_StufenPanel() {
+	public QM_StufenPanel(QM_Fenster frame) {
+		this.parentFrame = frame;
 		setPreferredSize(new Dimension(Dimensionen.GEWINNE.breite, Dimensionen.GEWINNE.hoehe));
 		setLayout(new GridLayout(0, 1, 0, 0));
+		System.out.println(frame);
+		System.out.println(this.parentFrame);
 	}
 	
 	public void stufenAnzeigen() {

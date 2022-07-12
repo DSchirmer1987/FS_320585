@@ -24,7 +24,7 @@ public class QM_Fenster extends JFrame {
 		setSize(new Dimension(Dimensionen.FENSTER.breite, Dimensionen.FENSTER.hoehe));
 		setLocationRelativeTo(null);
 		setResizable(false);
-		contentPane = new QM_ContentPanel();
+		contentPane = new QM_ContentPanel(this);
 		setContentPane(contentPane);
 	}
 
