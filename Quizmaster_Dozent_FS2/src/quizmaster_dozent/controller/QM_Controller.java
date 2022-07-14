@@ -33,13 +33,10 @@ public class QM_Controller {
 		});
 	}
 	
-	
 	private void init() {
 		this.spielrunde = new Spielrunde(null, null, null, 1, null);
 		this.spielrunde.spielrundeAufbauen();
 		System.out.println(this.spielrunde.getFragen());
-		
-		
 		
 		var tmp = 0;
 		this.gewinntabelle = this.spielrunde.getGewinntabelle();
@@ -52,11 +49,9 @@ public class QM_Controller {
 			tmp++;
 		}
 		this.frame.getContentPane().getStufenPanel().stufenAnzeigen();
-		
 	}
 	
 	public static void halloSagen() {
 		System.out.println("Hallo Welt!");
 	}
-	
 }
