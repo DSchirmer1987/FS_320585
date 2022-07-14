@@ -3,7 +3,10 @@ package beispiele_dozent_fs2;
 import java.util.ArrayList;
 
 public class App {
-
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		ArrayList<Customer> liste = new ArrayList<>();

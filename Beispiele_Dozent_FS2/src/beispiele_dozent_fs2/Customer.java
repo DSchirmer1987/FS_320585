@@ -1,5 +1,9 @@
 package beispiele_dozent_fs2;
-
+/**
+ * Die Klasse um einen Customer darzustellen
+ * @author CC_Dozent
+ *
+ */
 public class Customer {
 	private int id;
 	private String name;
