@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 import quizmaster_dozent.model.spiel.Antwort;
@@ -28,7 +29,7 @@ public class CSVLoader implements Datenverwaltung {
 		}
 		try {
 			// Einen Reader aufbauen, der den Inputstream liest und zur Verfügung stellt
-			InputStreamReader isr = new InputStreamReader(is);
+			InputStreamReader isr = new InputStreamReader(is, StandardCharsets.UTF_8);
 			BufferedReader br = new BufferedReader(isr);
 			String zeile;
 			while((zeile = br.readLine()) != null) {

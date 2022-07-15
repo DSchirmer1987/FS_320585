@@ -51,6 +51,28 @@ public class App {
 		 */
 		Customer fred = liste.stream().filter(customer -> "Fred".equals(customer.getName())).findAny().orElse(null);
 		System.out.println(fred);
+		
+		
+		
+		// Java 13 Switch Case Yield
+		int zahl = 5;
+		int result = switch(zahl) {
+			case 1 :{
+				System.out.println("Ist 1");
+				yield 1;
+			}
+			case 2:{
+				System.out.println("ist 2");
+				yield 2;
+			}
+			case 5:{
+				System.out.println("ist 5");
+				yield 5;
+			}
+		default:
+			throw new IllegalArgumentException("Unexpected value: " + zahl);
+		};
+		System.out.println(result);
 	}
 
 }
