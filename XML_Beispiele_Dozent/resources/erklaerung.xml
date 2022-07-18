@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<child>
+		<subchild>
+		</subchild>
+		<element></element>
+		<person gender="female"></person>
+	</child>
+</root>

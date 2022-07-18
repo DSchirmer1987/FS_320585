@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kunden>
+	<person>
+		<gender>Female</gender>
+		<firstname>Anna</firstname>
+	</person>
+	
+	<person gender="Male">
+		<firstname>Klaus</firstname>
+	</person>
+	
+	<person gender="Female" firstname="Maria"></person>
+	
+	<note>
+		<date>
+			<day></day>
+			<month></month>
+			<year></year>
+		</date>
+	</note>
+</kunden>
