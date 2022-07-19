@@ -1,12 +1,16 @@
 package xml_beispiele_dozent;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.stream.XMLStreamException;
+import javax.xml.transform.TransformerException;
 
 import org.xml.sax.SAXException;
 
@@ -49,14 +53,22 @@ public class App {
 		 */
 		try {
 			WriteXMLStAXCursor.writeXML(new FileOutputStream("resources/STAXCursor.xml"));
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			prettyPrintXML();
+		} catch (Exception e) {
 			e.printStackTrace();
-		} catch (XMLStreamException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		} 
 
+	}
+	
+	public static void prettyPrintXML() throws XMLStreamException, TransformerException, IOException {
+		ByteArrayOutputStream out = new ByteArrayOutputStream();
+		WriteXMLStAXCursor.writeXML(out);
+		
+		String xml = new String(out.toByteArray(), StandardCharsets.UTF_8);
+		
+		String prettyXML = WriteXMLStAXCursor.formatXML(xml);
+		
+		Files.writeString(Paths.get("resources/STAXCursorPretty.xml"), prettyXML, StandardCharsets.UTF_8);
 	}
 
 }
