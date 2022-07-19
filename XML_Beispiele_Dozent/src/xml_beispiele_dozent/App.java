@@ -19,6 +19,7 @@ import xml_beispiele_dozent.xml_read.ReadXMLStAXCursorParser;
 import xml_beispiele_dozent.xml_read.ReadXMLStAXEventParser;
 import xml_beispiele_dozent.xml_read.ReadXML_DOMParser;
 import xml_beispiele_dozent.xml_write.WriteXMLStAXCursor;
+import xml_beispiele_dozent.xml_write.WriteXMLStAXIterator;
 
 public class App {
 
@@ -54,6 +55,7 @@ public class App {
 		try {
 			WriteXMLStAXCursor.writeXML(new FileOutputStream("resources/STAXCursor.xml"));
 			prettyPrintXML();
+			WriteXMLStAXIterator.writeXML(new FileOutputStream("resources/STAXIterator.xml"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
