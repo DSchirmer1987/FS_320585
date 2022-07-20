@@ -8,6 +8,8 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileSystemView;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.transform.TransformerException;
@@ -18,6 +20,7 @@ import xml_beispiele_dozent.xml_read.ReadXMLSaxParser;
 import xml_beispiele_dozent.xml_read.ReadXMLStAXCursorParser;
 import xml_beispiele_dozent.xml_read.ReadXMLStAXEventParser;
 import xml_beispiele_dozent.xml_read.ReadXML_DOMParser;
+import xml_beispiele_dozent.xml_write.WriteXMLDom;
 import xml_beispiele_dozent.xml_write.WriteXMLStAXCursor;
 import xml_beispiele_dozent.xml_write.WriteXMLStAXIterator;
 
@@ -56,6 +59,7 @@ public class App {
 			WriteXMLStAXCursor.writeXML(new FileOutputStream("resources/STAXCursor.xml"));
 			prettyPrintXML();
 			WriteXMLStAXIterator.writeXML(new FileOutputStream("resources/STAXIterator.xml"));
+			WriteXMLDom.writeXMLDom("resources/DOM.xml");
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
