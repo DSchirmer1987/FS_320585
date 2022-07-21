@@ -16,6 +16,7 @@ import javax.xml.transform.TransformerException;
 
 import org.xml.sax.SAXException;
 
+import xml_beispiele_dozent.xml_modify.ModifyXMLDom;
 import xml_beispiele_dozent.xml_read.ReadXMLSaxParser;
 import xml_beispiele_dozent.xml_read.ReadXMLStAXCursorParser;
 import xml_beispiele_dozent.xml_read.ReadXMLStAXEventParser;
@@ -55,14 +56,19 @@ public class App {
 		/*
 		 * Schreiben von XML
 		 */
-		try {
-			WriteXMLStAXCursor.writeXML(new FileOutputStream("resources/STAXCursor.xml"));
-			prettyPrintXML();
-			WriteXMLStAXIterator.writeXML(new FileOutputStream("resources/STAXIterator.xml"));
-			WriteXMLDom.writeXMLDom("resources/DOM.xml");
-		} catch (Exception e) {
-			e.printStackTrace();
-		} 
+//		try {
+//			WriteXMLStAXCursor.writeXML(new FileOutputStream("resources/STAXCursor.xml"));
+//			prettyPrintXML();
+//			WriteXMLStAXIterator.writeXML(new FileOutputStream("resources/STAXIterator.xml"));
+//			WriteXMLDom.writeXMLDom("resources/DOM.xml");
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+		
+		/*
+		 * Modifizieren von XML
+		 */
+		ModifyXMLDom.modifyXML("resources/STAXCursorPretty.xml");
 
 	}
 	

@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Company>
-    <Staff id="1001">
-        <Name>Schirmer</Name>
-    </Staff>
-    <Staff id="1002">
-        <Name>Müller</Name>
-    </Staff>
-    <Staff id="1003">
-        <Name>Schmidt</Name>
-    </Staff>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Company>                
+    <Staff id="1001">                                
+        <Name>Schirmer</Name>                        
+    </Staff>                
+    <Staff id="1002">                        
+        <Name>Meier</Name>                        
+    </Staff>                
+    <Staff id="1003">                                
+        <Name>Schmidt</Name>                       
+    </Staff>        
 </Company>
