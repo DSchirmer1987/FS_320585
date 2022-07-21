@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.StringReader;
 
 import org.jdom2.Document;
+import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
 import org.jdom2.output.Format;
@@ -26,4 +27,26 @@ public class WriteXMLJDOM {
 			e.printStackTrace();
 		}
 	}
+	
+	public static void writeXML(String filename) {
+		Document doc = new Document();
+		doc.setRootElement(new Element("Company"));
+		
+		Element staff = new Element("Staff");
+		staff.setAttribute("id", "1001");
+		staff.addContent(new Element("Name").setText("Schirmer"));
+		staff.addContent(new Element("Salary").setText("42123"));
+		
+		doc.getRootElement().addContent(staff);
+		
+		XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
+		FileWriter fw;
+		try {
+			fw = new FileWriter(filename);
+			xmlOutputter.output(doc, fw);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}	
 }

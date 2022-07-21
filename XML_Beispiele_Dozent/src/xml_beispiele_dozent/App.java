@@ -60,6 +60,7 @@ public class App {
 		 * Schreiben von XML
 		 */
 		WriteXMLJDOM.writeSimpleXML("resources/JDOMSimple.xml");
+		WriteXMLJDOM.writeXML("resources/JDOM.xml");
 //		try {
 //			WriteXMLStAXCursor.writeXML(new FileOutputStream("resources/STAXCursor.xml"));
 //			prettyPrintXML();
