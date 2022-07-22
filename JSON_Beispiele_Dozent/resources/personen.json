@@ -1,0 +1,52 @@
+[
+  {
+    "firstname": "David",
+    "lastname": "Bolz",
+    "gender": "m"
+  },
+  {
+    "firstname": "Doritta",
+    "lastname": "Bolz",
+    "gender": "f"
+  },
+  {
+    "firstname": "Victor",
+    "lastname": "Kögel",
+    "gender": "m"
+  },
+  {
+    "firstname": "Connie",
+    "lastname": "Schug",
+    "gender": "f"
+  },
+  {
+    "firstname": "Kathi",
+    "lastname": "Schug",
+    "gender": "f"
+  },
+  {
+    "firstname": "Arzu",
+    "lastname": "Schulte",
+    "gender": "f"
+  },
+  {
+    "firstname": "David",
+    "lastname": "Plank",
+    "gender": "m"
+  },
+  {
+    "firstname": "Sigrun",
+    "lastname": "Kerber",
+    "gender": "f"
+  },
+  {
+    "firstname": "Britta",
+    "lastname": "Kerber",
+    "gender": "f"
+  },
+  {
+    "firstname": "Doritta",
+    "lastname": "Waibel",
+    "gender": "f"
+  }
+]

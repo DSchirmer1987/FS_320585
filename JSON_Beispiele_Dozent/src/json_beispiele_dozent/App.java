@@ -25,9 +25,13 @@ public class App {
 		GSONBeispiel.objectToJSON(emps, "resources/employees.json");
 		
 		
-		
 		ArrayList<Employee> liste = GSONBeispiel.JSONtoList("resources/employees.json");
 		System.out.println(liste);
+		
+		ArrayList<Person> personen = GSONBeispiel.fromURL("https://randomname.de/?format=json&count=10");
+		System.out.println(personen);
+		
+		GSONBeispiel.objectToJSON(GSONBeispiel.fromURL("https://randomname.de/?format=json&count=10"), "resources/personen.json");
 	}
 
 }

@@ -4,6 +4,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 
 import com.google.gson.Gson;
@@ -49,5 +52,20 @@ public class GSONBeispiel {
 			e.printStackTrace();
 		}
 		return list;
+	}
+	
+	public static ArrayList<Person> fromURL(String url){
+		Gson gson = new Gson();
+		ArrayList<Person> pListe = new ArrayList<>();
+		
+		try {
+			URL Url = new URL(url);
+			InputStreamReader reader = new InputStreamReader(Url.openStream());
+			pListe = gson.fromJson(reader, new TypeToken<ArrayList<Person>>() {}.getType());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return pListe;
 	}
 }
