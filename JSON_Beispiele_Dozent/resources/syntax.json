@@ -1,0 +1,11 @@
+{
+	"employee":{
+		"Key":"Value", 
+		"Key2":"Value", 
+		"age": 30, 
+		"name":"John", 
+		"wahrheit":true, 
+		"salary":null, 
+		"skills:["Java", "Python"]
+	}
+}
