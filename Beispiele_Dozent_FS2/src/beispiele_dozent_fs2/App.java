@@ -1,6 +1,14 @@
 package beispiele_dozent_fs2;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileSystemView;
 
 public class App {
 	/**
@@ -8,7 +16,26 @@ public class App {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		// Schreiben von Objekten direkt in dateien
+		Customer james = new Customer(0, "James");
 		
+		// JFilechoose, FileSystemView für Dateisystemangaben
+		JFileChooser jfc = new JFileChooser();
+		FileSystemView fw = jfc.getFileSystemView();
+		//.getDefaultDirectory = Standard-Benutzer-Ordner
+		File file = new File(fw.getDefaultDirectory().toString() + "/person.dat");
+		
+		try(FileOutputStream fos = new FileOutputStream(file); ObjectOutputStream oos = new ObjectOutputStream(fos)){
+			oos.writeObject(james);
+			oos.flush();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public static void beispiel() {
 		ArrayList<Customer> liste = new ArrayList<>();
 		Customer james = new Customer(0, "James");
 		liste.add(new Customer(0, "James"));

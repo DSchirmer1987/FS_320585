@@ -1,10 +1,15 @@
 package beispiele_dozent_fs2;
+
+import java.io.Serializable;
+
 /**
  * Die Klasse um einen Customer darzustellen
  * @author CC_Dozent
  *
  */
-public class Customer {
+public class Customer implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 	private int id;
 	private String name;
 	
