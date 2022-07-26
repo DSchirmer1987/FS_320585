@@ -31,7 +31,8 @@ public class MyEastPanel extends JPanel {
 		
 		JButton btnNewButton = new JButton("New button");
 		add(btnNewButton);
-		
+//		btnNewButton.addMouseListener(new MyPopupMenuOpener());
+//		
 		JLabel lblNewLabel_1 = new JLabel("New label");
 		add(lblNewLabel_1);
 
