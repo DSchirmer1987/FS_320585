@@ -32,6 +32,7 @@ public class MySocketClass {
 	
 	public static void inetInformation() {
 		try {
+			
 			InetAddress ip = InetAddress.getByName("www.github.com");
 			System.out.println(ip.getCanonicalHostName());
 			System.out.println(ip.getHostAddress());
